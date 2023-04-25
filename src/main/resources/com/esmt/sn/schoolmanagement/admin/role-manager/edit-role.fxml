@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.dlsc.formsfx.view.controls.SimpleTextControl?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="639.0" prefWidth="704.0" stylesheets="@../../../../../../css/sm.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esmt.sn.schoolmanagement.front.admin.roles.EditRoleController">
+   <children>
+      <VBox prefHeight="546.0" prefWidth="654.0" spacing="9.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <SimpleTextControl alignment="CENTER" maxWidth="1.7976931348623157E308" prefWidth="550.0">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="41.5" minHeight="22.5" prefHeight="30.0" />
+                  <RowConstraints maxHeight="74.0" minHeight="0.0" prefHeight="60.0" />
+                  <RowConstraints maxHeight="74.0" minHeight="0.0" prefHeight="20.0" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="roleField" prefHeight="46.0" prefWidth="670.0" styleClass="c-text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label prefHeight="20.0" prefWidth="145.0" text="Nom du role" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="roleLabelError" prefHeight="8.0" prefWidth="300.0" styleClass="error-color" textAlignment="JUSTIFY" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </SimpleTextControl>
+            <Label text="Privilèges">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <AnchorPane prefHeight="351.0" prefWidth="654.0">
+               <children>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="380.0" prefWidth="606.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <Accordion fx:id="accordion" prefWidth="604.0" styleClass="dash-menu-accordion-3" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="97.0" prefWidth="654.0">
+               <children>
+                  <VBox layoutY="51.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" minHeight="30.0" prefHeight="33.0" prefWidth="654.0" spacing="12.0">
+                           <children>
+                              <ProgressIndicator fx:id="loaderProgress" prefHeight="30.0" prefWidth="30.0" visible="false" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="actionHBoxBtn" alignment="CENTER" prefHeight="49.0" prefWidth="654.0" spacing="12.0">
+                           <children>
+                              <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onSave" text="Enregistrer">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#onCancel" styleClass="button-secondary" text="Annuler">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

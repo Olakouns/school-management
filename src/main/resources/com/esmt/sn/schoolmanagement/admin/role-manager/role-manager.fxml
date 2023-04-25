@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane stylesheets="@../../../../../../css/sm.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esmt.sn.schoolmanagement.front.admin.roles.RoleManagerController">
+   <children>
+      <AnchorPane prefHeight="632.0" prefWidth="858.0" styleClass="bg-home" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="43.0" layoutY="35.0" prefHeight="32.0" prefWidth="180.0" styleClass="title-1" text="Listes des roles" AnchorPane.leftAnchor="43.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button layoutX="470.0" layoutY="34.0" mnemonicParsing="false" onAction="#onAddRole" text="Ajouter un role" AnchorPane.rightAnchor="40.0">
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-plus" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <GridPane fx:id="gridPane" layoutX="43.0" layoutY="135.0" vgap="15.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="140.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+               </columnConstraints>
+            </GridPane>
+            <VBox alignment="CENTER" styleClass="progress-indicator" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <ProgressIndicator fx:id="loaderProgress" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="32.0" visible="false" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

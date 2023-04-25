@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="108.0" prefWidth="959.0" styleClass="card-dash" stylesheets="@../../../../../../css/sm.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esmt.sn.schoolmanagement.front.admin.users.UserItemController">
+   <children>
+      <HBox alignment="CENTER" layoutX="22.0" layoutY="22.0" spacing="15.0" AnchorPane.leftAnchor="33.0">
+         <children>
+            <VBox fx:id="boxImage" alignment="CENTER" prefHeight="65.0" prefWidth="65.0">
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../asserts/avatar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="12.0">
+                     <children>
+                        <Label fx:id="lastNameLabel" styleClass="k-text-color" text="KOUNASSO">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="firstnameLabel" text="Lazare Razacki">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="emailLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="191.0" text="kounassolazare@gmail.com">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="8.0">
+                     <children>
+                        <Label styleClass="k-text-color" text="Tel : ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="phoneLabel" text="+221 78 59001 31">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="8.0">
+                     <children>
+                        <Label styleClass="k-text-color" text="Adresse: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="addressLabel" text="Ben Tally">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <MenuButton layoutX="868.0" layoutY="36.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="21.0" styleClass="view-more" AnchorPane.rightAnchor="33.0">
+         <items>
+            <MenuItem fx:id="editGroupMenu" mnemonicParsing="false" onAction="#onEdit" text="Modifier" />
+            <MenuItem fx:id="deleteGroupMenu" mnemonicParsing="false" onAction="#onDelete" text="Supprimer" />
+         </items>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <SVGPath content="M10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17C10.9 17 10 17.9 10 19ZM10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17C10.9 17 10 17.9 10 19Z M10 5C10 6.1 10.9 7 12 7C13.1 7 14 6.1 14 5C14 3.9 13.1 3 12 3C10.9 3 10 3.9 10 5Z M10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10C10.9 10 10 10.9 10 12Z" fill="#0a884d" strokeLineCap="ROUND" strokeType="OUTSIDE" />
+         </graphic>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MenuButton>
+   </children>
+</AnchorPane>

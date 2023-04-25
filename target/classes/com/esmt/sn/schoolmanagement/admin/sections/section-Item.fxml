@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="350.0" maxWidth="346.0" minHeight="350.0" minWidth="346.0" prefHeight="350.0" prefWidth="346.0" styleClass="card" stylesheets="@../../../../../../css/sm.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esmt.sn.schoolmanagement.front.admin.sections.SectionItemController">
+   <children>
+      <VBox alignment="TOP_CENTER" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="219.0" fitWidth="349.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../../../../../asserts/school.png" />
+               </image>
+            </ImageView>
+            <AnchorPane prefWidth="436.0">
+               <children>
+                  <Label fx:id="sectionName" layoutX="26.0" layoutY="10.0" text="Label" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <MenuButton layoutX="289.0" layoutY="13.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="21.0" styleClass="view-more">
+                     <items>
+                        <MenuItem fx:id="editGroupMenu" mnemonicParsing="false" onAction="#onEdit" text="Modifier" />
+                        <MenuItem fx:id="deleteGroupMenu" mnemonicParsing="false" onAction="#onDelete" text="Supprimer" />
+                     </items>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <SVGPath content="M10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17C10.9 17 10 17.9 10 19ZM10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17C10.9 17 10 17.9 10 19Z M10 5C10 6.1 10.9 7 12 7C13.1 7 14 6.1 14 5C14 3.9 13.1 3 12 3C10.9 3 10 3.9 10 5Z M10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10C10.9 10 10 10.9 10 12Z" fill="#0a884d" strokeLineCap="ROUND" strokeType="OUTSIDE" />
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </MenuButton>
+                  <HBox layoutX="26.0" layoutY="14.0" spacing="5.0">
+                     <children>
+                        <Label text="Nonbre de classes : " />
+                        <Label fx:id="nbrClass" styleClass="k-text-color" text="0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="26.0" layoutY="37.0" spacing="5.0">
+                     <children>
+                        <Label text="Nonbre de rubriques :" />
+                        <Label fx:id="nbrRubrics" style="-fx-font-weight: bold;" styleClass="k-text-color" text="0" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

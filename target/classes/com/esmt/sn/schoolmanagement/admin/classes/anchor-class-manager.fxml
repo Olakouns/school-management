@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="532.0" prefWidth="777.0" stylesheets="@../../../../../../css/sm.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esmt.sn.schoolmanagement.front.admin.classes.AnchorClassManagerController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-insets: 0;" vbarPolicy="NEVER" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Button fx:id="btnAddClass" layoutX="623.0" layoutY="14.0" mnemonicParsing="false" onAction="#onAddNewClass" text="Ajouter une classe" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-plus" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <VBox fx:id="vBox" layoutX="12.0" layoutY="100.0" spacing="15.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="100.0" />
+                  <VBox alignment="CENTER" layoutX="367.0" layoutY="52.0" styleClass="progress-indicator" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+                     <children>
+                        <ProgressIndicator fx:id="loaderProgress" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="32.0" visible="false" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

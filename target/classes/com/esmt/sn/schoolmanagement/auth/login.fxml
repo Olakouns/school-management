@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.dlsc.formsfx.view.controls.SimpleTextControl?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="798.0" prefWidth="1147.0" style="-fx-background-color: #fff;" stylesheets="@../../../../../css/sm.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esmt.sn.schoolmanagement.front.auth.LoginController">
+   <children>
+      <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="470.5" minWidth="341.0" prefWidth="470.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.5" minWidth="10.0" prefWidth="676.5" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: fff;">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <ImageView fitHeight="77.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../asserts/logo.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane fx:id="parentContent" prefHeight="452.0" prefWidth="375.0">
+                           <children>
+                              <VBox alignment="CENTER" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label styleClass="sm-subtitle" text="Connectez-vous">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane prefHeight="234.0">
+                                       <children>
+                                          <VBox layoutY="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <SimpleTextControl prefWidth="350.0">
+                                                   <children>
+                                                      <Label maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="136.0" styleClass="f-w" text="Email" />
+                                                      <TextField fx:id="emailField" prefHeight="39.0" prefWidth="364.0" promptText="johndoe@email.com" GridPane.rowIndex="1" />
+                                                      <Label fx:id="emailError" prefHeight="17.0" prefWidth="321.0" styleClass="error-color" textFill="#bc1212" GridPane.rowIndex="2" />
+                                                      <Label style="-fx-font-weight: 600;" text="*" textFill="#ff424d">
+                                                         <padding>
+                                                            <Insets left="31.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <rowConstraints>
+                                                      <RowConstraints prefHeight="25.0" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="45.0" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="15.0" />
+                                                   </rowConstraints>
+                                                </SimpleTextControl>
+                                                <SimpleTextControl prefHeight="93.0" prefWidth="311.0">
+                                                   <children>
+                                                      <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="382.0" promptText="votre mot de passe" GridPane.rowIndex="1" />
+                                                      <Label maxWidth="1.7976931348623157E308" text="Mots de passe" />
+                                                      <Label fx:id="passwordError" prefHeight="17.0" prefWidth="380.0" styleClass="error-color" GridPane.rowIndex="2" />
+                                                      <Label style="-fx-font-weight: 600;" text="*" textFill="#ff424d">
+                                                         <padding>
+                                                            <Insets left="80.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <AnchorPane GridPane.rowIndex="2">
+                                                         <children>
+                                                            <VBox alignment="CENTER_RIGHT" layoutX="-9.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onPasswordForgot" prefHeight="33.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-padding: 0;">
+                                                                     <graphic>
+                                                                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="167.0" styleClass="k-text-color" text="Mots de passe oublié?">
+                                                                           <cursor>
+                                                                              <Cursor fx:constant="HAND" />
+                                                                           </cursor>
+                                                                        </Label>
+                                                                     </graphic>
+                                                                     <VBox.margin>
+                                                                        <Insets top="6.0" />
+                                                                     </VBox.margin>
+                                                                  </Button>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                   <rowConstraints>
+                                                      <RowConstraints prefHeight="25.0" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="45.0" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="25.0" />
+                                                   </rowConstraints>
+                                                </SimpleTextControl>
+                                                <VBox alignment="CENTER">
+                                                   <VBox.margin>
+                                                      <Insets top="15.0" />
+                                                   </VBox.margin>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </VBox>
+                                                <Label fx:id="errorLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="322.0" styleClass="error-color">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" top="5.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <VBox alignment="CENTER">
+                                                   <children>
+                                                      <Button fx:id="submitBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onConnect" text="Connexion">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                      <ProgressIndicator fx:id="loaderProgress" prefHeight="32.0" prefWidth="57.0" visible="false" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onHelp" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <Label styleClass="k-text-color" text="Besoin d’aide ?" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label text="© 2023 SM.Ola" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D7C7D3;" GridPane.columnIndex="1">
+               <center>
+                  <AnchorPane BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView cache="true" fitHeight="807.0" fitWidth="749.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-72.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../../../../../asserts/bg-2.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <bottom>
+                  <AnchorPane maxHeight="103.0" prefHeight="0.0" prefWidth="605.0" BorderPane.alignment="CENTER" />
+               </bottom>
+               <top>
+                  <AnchorPane maxHeight="103.0" prefHeight="0.0" prefWidth="605.0" BorderPane.alignment="CENTER" />
+               </top>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="195.0" prefWidth="893.0" styleClass="card-dash" stylesheets="@../../../../../../css/sm.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esmt.sn.schoolmanagement.front.admin.classes.ClassItemController">
+   <children>
+      <AnchorPane AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label fx:id="className" styleClass="k-text-color" text="Classe example" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" layoutY="35.0" prefHeight="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+               <columns>
+                  <TableColumn fx:id="rubricsNameColumn" editable="false" prefWidth="75.0" sortable="false" text="Rubriques" />
+                  <TableColumn fx:id="amountColumn" editable="false" prefWidth="132.0" sortable="false" text="Montants" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <MenuButton layoutX="756.0" layoutY="3.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="21.0" styleClass="view-more" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <MenuItem fx:id="editGroupMenu" mnemonicParsing="false" onAction="#onEdit" text="Modifier" />
+                  <MenuItem fx:id="addRubricsBtn" mnemonicParsing="false" onAction="#onAddRubrics" text="Ajouter une rubrique" />
+                  <MenuItem fx:id="deleteGroupMenu" mnemonicParsing="false" onAction="#onDelete" text="Supprimer" />
+               </items>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <SVGPath content="M10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17C10.9 17 10 17.9 10 19ZM10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17C10.9 17 10 17.9 10 19Z M10 5C10 6.1 10.9 7 12 7C13.1 7 14 6.1 14 5C14 3.9 13.1 3 12 3C10.9 3 10 3.9 10 5Z M10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10C10.9 10 10 10.9 10 12Z" fill="#0a884d" strokeLineCap="ROUND" strokeType="OUTSIDE" />
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </MenuButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
