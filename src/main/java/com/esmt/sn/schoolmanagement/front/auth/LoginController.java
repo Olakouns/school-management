@@ -4,6 +4,8 @@ import com.esmt.sn.schoolmanagement.SchoolManagementApplication;
 import com.esmt.sn.schoolmanagement.back.exceptions.DAOException;
 import com.esmt.sn.schoolmanagement.back.services.AuthService;
 import com.esmt.sn.schoolmanagement.back.services.AuthServiceImpl;
+import com.esmt.sn.schoolmanagement.models.Privilege;
+import com.esmt.sn.schoolmanagement.models.enums.TypePrivilege;
 import com.esmt.sn.schoolmanagement.payload.ApiResponse;
 import com.esmt.sn.schoolmanagement.utils.Basics;
 import com.esmt.sn.schoolmanagement.utils.Constants;
@@ -21,7 +23,9 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
 public class LoginController implements Initializable {
 
@@ -77,10 +81,17 @@ public class LoginController implements Initializable {
                 if (apiResponse.isSuccess()) {
                     logger.info(apiResponse.getMessage());
                     this.loadPrivileges();
+
                     Platform.runLater(() -> {
                         Basics.closeStage(actionEvent);
-                        this.openGlobalAdminHome();
+                        if (Constants.USER_PRIVILEGE.contains(TypePrivilege.CREATE_ROLE)) {
+                            this.openGlobalAdminHome();
+                        } else {
+                            this.openUserHome();
+                        }
                     });
+
+
                 } else {
                     this.showError(apiResponse.getMessage());
                 }
@@ -93,7 +104,7 @@ public class LoginController implements Initializable {
 
     private void loadPrivileges() {
         Constants.utilisateur.getRoles().forEach(role -> {
-            Constants.USER_PRIVILEGE.addAll(role.getPrivileges());
+            Constants.USER_PRIVILEGE.addAll(role.getPrivileges().stream().map(Privilege::getName).collect(Collectors.toList()));
         });
     }
 
@@ -104,6 +115,21 @@ public class LoginController implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image("/asserts/logo.jpg"));
             stage.setTitle("Administrateur-Home");
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void openUserHome() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SchoolManagementApplication.class.getResource("front/global-home.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 871, 686);
+            Stage stage = new Stage();
+            stage.getIcons().add(new Image("/asserts/logo.jpg"));
+            stage.setTitle("User-Home");
             stage.setResizable(false);
             stage.setScene(scene);
             stage.show();

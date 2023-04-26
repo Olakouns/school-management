@@ -51,6 +51,7 @@ public class ClassManagerController implements Initializable, Loadable {
 
     @Override
     public void loadData() {
+        tabPane.getTabs().clear();
         loaderProgress.setVisible(true);
         new Thread(() -> {
             try {

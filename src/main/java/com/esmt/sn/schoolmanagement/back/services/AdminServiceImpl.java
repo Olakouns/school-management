@@ -102,7 +102,6 @@ public class AdminServiceImpl implements AdminService {
         Root<Classe> root = cr.from(Classe.class);
         cr.select(root).where(cb.equal(root.get("section").get("nom"), section));
         Query<Classe> query = session.createQuery(cr);
-        System.out.println((Object) query.getResultList());
         classes = query.getResultList();
         return classes;
     }

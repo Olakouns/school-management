@@ -2,6 +2,7 @@ package com.esmt.sn.schoolmanagement.front.admin.classes;
 
 import com.esmt.sn.schoolmanagement.models.Classe;
 import com.esmt.sn.schoolmanagement.payload.RubricPayload;
+import com.esmt.sn.schoolmanagement.utils.Constants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -42,7 +43,7 @@ public class ClassItemController implements Initializable {
         tableView.getItems().clear();
         ObservableList<RubricPayload> rubricPayloads = FXCollections.observableArrayList();
         this.classe.getRubriques().forEach(rubrique -> {
-            rubricPayloads.add(new RubricPayload(String.valueOf(rubrique.getLabel()), rubrique.getAmount().toString()));
+            rubricPayloads.add(new RubricPayload(String.valueOf(rubrique.getLabel()), Constants.formatAmount(rubrique.getAmount().doubleValue())+ "F CFA"));
         });
         tableView.setItems(rubricPayloads);
     }

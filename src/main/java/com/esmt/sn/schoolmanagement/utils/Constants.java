@@ -1,7 +1,9 @@
 package com.esmt.sn.schoolmanagement.utils;
 
 import com.esmt.sn.schoolmanagement.models.Privilege;
+import com.esmt.sn.schoolmanagement.models.Section;
 import com.esmt.sn.schoolmanagement.models.Utilisateur;
+import com.esmt.sn.schoolmanagement.models.enums.TypePrivilege;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -27,12 +29,13 @@ import java.util.*;
 
 public class Constants {
 
+    public static Section CURRENT_SECTION;
     public static String API_URL = "https://dev-api.artcreativity.io/eges/api/";
     public static String MEDIA_API_URL = "https://dev-api.artcreativity.io/eges/";
 
     public static final int sizeOfContentPage = 50;
     public static final double discountLimit = 25.0;
-    public static List<Privilege> USER_PRIVILEGE = new ArrayList<>();
+    public static List<TypePrivilege> USER_PRIVILEGE = new ArrayList<>();
 
     public static Utilisateur utilisateur;
 

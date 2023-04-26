@@ -57,7 +57,7 @@ public class DataLoad {
 
             List<Privilege> privilegeAdmin = new ArrayList<>();
 
-            for (int i = 1; i < TypePrivilege.values().length; i++) {
+            for (int i = 0; i < TypePrivilege.values().length; i++) {
                 String description = TypePrivilege.values()[i].toString().replace("_", " ");
                 String category = description.split(" ")[description.split(" ").length - 1];
                 privilegeAdmin.add(adminService.addPrivilege(new Privilege(category, TypePrivilege.values()[i], description)));

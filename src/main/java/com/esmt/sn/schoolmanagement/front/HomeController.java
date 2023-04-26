@@ -39,7 +39,6 @@ public class HomeController implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image("/asserts/logo.jpg"));
             stage.setTitle("Administrateur-Configuration");
-//            stage.setMaximized(true);
             stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
