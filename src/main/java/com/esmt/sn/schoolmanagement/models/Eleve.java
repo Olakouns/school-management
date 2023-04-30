@@ -20,6 +20,7 @@ public class Eleve {
     @Enumerated(EnumType.STRING)
     private GenderType genderType;
     private String matrimonial;
+    private String personnelNumber;
 
     @OneToMany(mappedBy = "eleve", cascade = CascadeType.PERSIST)
     private List<Bulletin> bulletins;
@@ -111,6 +112,14 @@ public class Eleve {
 
     public void setExaunerations(List<Exoneration> exaunerations) {
         this.exaunerations = exaunerations;
+    }
+
+    public String getPersonnelNumber() {
+        return personnelNumber;
+    }
+
+    public void setPersonnelNumber(String personnelNumber) {
+        this.personnelNumber = personnelNumber;
     }
 
     @Override

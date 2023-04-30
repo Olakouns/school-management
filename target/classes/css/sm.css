@@ -297,6 +297,13 @@
     -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 0);
 }
 
+.card-logo {
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.12), 10, 0, 0, 0);
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+}
+
 .view-more {
     -fx-background-color: transparent;
 }
@@ -439,4 +446,23 @@
     -fx-background-insets: 0, 0 0 1 0;
     -fx-margin: 0 5px 0 5px;
     -fx-padding: 0 5px 0 5px;
+}
+
+.adf-style {
+    -fx-background-color: #0A884D;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding:  5px 12px;
+}
+
+.adf-style-2 {
+    -fx-background-color: white;
+    -fx-text-fill: #0A884D;
+    -fx-font-weight: bold;
+    -fx-padding:  5px 12px;
+}
+
+.text-stroke {
+    -fx-stroke-width: 1px;
+    -fx-stroke:  #0A884D;
 }
