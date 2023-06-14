@@ -124,7 +124,6 @@
             <TableColumn fx:id="nbrRubricsNameColumn1" editable="false" prefWidth="75.0" sortable="false" text="Sexe" />
             <TableColumn fx:id="actionColumn" editable="false" prefWidth="132.0" sortable="false" text="Date de naissance" />
             <TableColumn fx:id="actionColumn1" editable="false" prefWidth="132.0" sortable="false" text="Numéro matricule" />
-            <TableColumn fx:id="actionColumn11" editable="false" prefWidth="132.0" sortable="false" text="Situation matrimoniale" />
          </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

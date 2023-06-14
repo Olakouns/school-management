@@ -1,6 +1,5 @@
 package com.esmt.sn.schoolmanagement.models;
 
-
 import com.esmt.sn.schoolmanagement.models.enums.GenderType;
 import jakarta.persistence.*;
 
@@ -11,7 +10,7 @@ import java.util.List;
 public class Eleve {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_eleve")
+    @Column(name = "id_eleve")
     protected int id;
 
     private String firstname;
@@ -29,10 +28,10 @@ public class Eleve {
     private Classe classe;
 
     @OneToMany(mappedBy = "eleve", cascade = CascadeType.PERSIST)
-    private  List<Paiement> paiements;
+    private List<Paiement> paiements;
 
     @OneToMany(mappedBy = "eleve", cascade = CascadeType.PERSIST)
-    private  List<Exoneration> exaunerations;
+    private List<Exoneration> exaunerations;
 
     public int getId() {
         return id;
